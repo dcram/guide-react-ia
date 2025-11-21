@@ -1,0 +1,8 @@
+{
+  "label": "Avancé",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Bonnes pratiques et workflow avec Claude Code pour aller plus loin."
+  }
+}

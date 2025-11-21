@@ -1,0 +1,8 @@
+{
+  "label": "Intégration API",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Connecter votre frontend React à votre backend FastAPI."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Fondamentaux",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Les fondamentaux React pour créer vos interfaces d'annotation."
+  }
+}
