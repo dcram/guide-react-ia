@@ -274,6 +274,59 @@ src/
 
 **utils** : Fonctions pures sans dépendance React (formatage, calculs, constantes).
 
+### Navigation entre pages : React Router
+
+Dans une application React multi-pages, on utilise **React Router** pour gérer la navigation côté client (sans rechargement de page).
+
+**Concepts clés :**
+
+**BrowserRouter** : Composant racine qui active le système de routing dans votre app. Il doit envelopper toute l'application.
+
+**Routes** : Conteneur qui regroupe toutes vos routes (chemins de navigation).
+
+**Route** : Définit une correspondance entre un chemin d'URL (ex: `/dashboard`) et le composant à afficher.
+
+```jsx
+// Installation nécessaire
+// npm install react-router-dom
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+function App() {
+  return (
+    <BrowserRouter>  {/* Active le routing */}
+      <Routes>       {/* Conteneur des routes */}
+        <Route path="/" element={<HomePage />} />
+        {/* Quand l'URL est "/", affiche HomePage */}
+
+        <Route path="/about" element={<AboutPage />} />
+        {/* Quand l'URL est "/about", affiche AboutPage */}
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
+**Navigation programmatique** : Pour créer des liens, utilisez le composant `Link` :
+
+```jsx
+import { Link } from 'react-router-dom';
+
+function NavBar() {
+  return (
+    <nav>
+      <Link to="/">Accueil</Link>
+      <Link to="/annotation">Annotation</Link>
+      <Link to="/dashboard">Dashboard</Link>
+    </nav>
+  );
+}
+```
+
+:::tip Pourquoi React Router ?
+Sans React Router, changer de page rechargerait toute l'app. Avec React Router, seul le composant de la page change, l'app reste rapide et fluide.
+:::
+
 ### Exemple : Arborescence d'une app d'annotation
 
 ```jsx
